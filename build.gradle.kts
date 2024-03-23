@@ -1,17 +1,18 @@
 plugins {
     kotlin("jvm") version "1.9.21"
+    `maven-publish`
 }
 
-group = "dk.fvtrademarket.api.kt"
-version = "1.0-SNAPSHOT"
+group = "dk.fvtrademarket"
+version = "0.0.1"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation("org.jetbrains.kotlin:kotlin-test")
-    implementation("com.google.code.gson:gson:2.10")
+    testImplementation("org.jetbrains.kotlin:kotlin-test:1.9.22")
+    implementation("com.google.code.gson:gson:2.10.1")
 }
 
 tasks.test {
@@ -19,4 +20,16 @@ tasks.test {
 }
 kotlin {
     jvmToolchain(17)
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "dk.fvtrademarket"
+            artifactId = "Freakyville-API-Kotlin-Wrapper"
+            version = "0.0.1"
+
+            from(components["java"])
+        }
+    }
 }
