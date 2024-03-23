@@ -1,7 +1,7 @@
 package dk.fvtrademarket.api.kt
 
-class FreakyvilleAPIImpl : FreakyvilleAPI {
+internal class DefaultFreakyvilleAPI : FreakyvilleAPI {
     override fun getWebsiteAPI(): FreakyvilleWebsiteAPI {
-        return FreakyvilleWebsiteAPI.instance
+        return FreakyvilleWebsiteAPI()
     }
 }

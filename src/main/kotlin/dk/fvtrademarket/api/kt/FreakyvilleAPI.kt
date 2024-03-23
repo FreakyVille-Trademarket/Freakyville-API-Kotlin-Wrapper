@@ -2,7 +2,7 @@ package dk.fvtrademarket.api.kt
 
 interface FreakyvilleAPI {
     companion object {
-        val instance: FreakyvilleAPI = FreakyvilleAPIImpl()
+        var instance: FreakyvilleAPI = DefaultFreakyvilleAPI()
     }
 
     fun getWebsiteAPI(): FreakyvilleWebsiteAPI

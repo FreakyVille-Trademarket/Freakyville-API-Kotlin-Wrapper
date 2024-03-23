@@ -1,4 +1,4 @@
-package dk.fvtrademarket.api.kt.internal
+package dk.fvtrademarket.api.kt.internal.requests
 
 import com.google.gson.Gson
 import dk.fvtrademarket.api.kt.profile.LinkedFreakyvilleProfile
