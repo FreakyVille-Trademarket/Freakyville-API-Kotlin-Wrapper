@@ -4,6 +4,8 @@ import dk.fvtrademarket.api.kt.internal.cache.Cache
 import dk.fvtrademarket.api.kt.internal.cache.CacheHolder
 import dk.fvtrademarket.api.kt.internal.cache.ICacheType
 import dk.fvtrademarket.api.kt.internal.requests.RequestMaker
+import dk.fvtrademarket.api.kt.lists.GuardList
+import dk.fvtrademarket.api.kt.lists.StaffList
 import dk.fvtrademarket.api.kt.profile.LinkedFreakyvilleProfile
 import dk.fvtrademarket.api.kt.wheel.WheelWrapper
 import java.time.Duration
@@ -38,6 +40,14 @@ class FreakyvilleWebsiteAPI: CacheHolder {
 
     fun getLinkedProfile(discordId: Long): LinkedFreakyvilleProfile {
         return getLinkedProfile(discordId.toString())
+    }
+
+    fun getGuardList(): GuardList {
+        return RequestMaker.makeRequest(GuardList::class.java).orElseThrow { IllegalArgumentException("Could not get the Guard List") } as GuardList
+    }
+
+    fun getStaffList(): StaffList {
+        return RequestMaker.makeRequest(StaffList::class.java).orElseThrow { IllegalArgumentException("Could not get the Staff List") } as StaffList
     }
 
     override fun clearCache(type: ICacheType) {

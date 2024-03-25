@@ -1,6 +1,8 @@
 package dk.fvtrademarket.api.kt.internal.requests
 
 import com.google.gson.Gson
+import dk.fvtrademarket.api.kt.lists.GuardList
+import dk.fvtrademarket.api.kt.lists.StaffList
 import dk.fvtrademarket.api.kt.profile.LinkedFreakyvilleProfile
 import dk.fvtrademarket.api.kt.wheel.WheelWrapper
 import java.io.IOException
@@ -51,6 +53,8 @@ object RequestMaker {
         return when (type) {
             WheelWrapper::class.java -> "wheel"
             LinkedFreakyvilleProfile::class.java -> "user/discord"
+            GuardList::class.java -> "guard"
+            StaffList::class.java -> "staff"
             else -> ""
         }
     }
