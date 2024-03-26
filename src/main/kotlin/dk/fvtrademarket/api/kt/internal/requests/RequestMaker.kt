@@ -1,9 +1,12 @@
 package dk.fvtrademarket.api.kt.internal.requests
 
 import com.google.gson.Gson
+import com.google.gson.GsonBuilder
+import dk.fvtrademarket.api.kt.internal.gson.SearchedUserDeserializer
 import dk.fvtrademarket.api.kt.lists.GuardList
 import dk.fvtrademarket.api.kt.lists.StaffList
 import dk.fvtrademarket.api.kt.profile.LinkedFreakyvilleProfile
+import dk.fvtrademarket.api.kt.search.SearchedUser
 import dk.fvtrademarket.api.kt.wheel.WheelWrapper
 import java.io.IOException
 import java.io.InputStreamReader
@@ -12,6 +15,10 @@ import java.net.URL
 import java.util.Optional
 
 object RequestMaker {
+    private val gson = GsonBuilder()
+        .registerTypeAdapter(SearchedUser::class.java, SearchedUserDeserializer())
+        .create()
+
     /**
      * This method makes a request to the Freakyville api website and returns the result as an Optional.
      * The arguments are appended to the URL of the Freakyville api website. It is recommended to use the other makeRequest method to make it easier to handle a change in the url source.
@@ -39,7 +46,7 @@ object RequestMaker {
     fun makeRequest(forWhat: Class<*>, url: URL): Optional<Any> {
         try {
             InputStreamReader(url.openStream()).use { reader ->
-                return Optional.ofNullable(Gson().fromJson(reader, forWhat))
+                return Optional.ofNullable(gson.fromJson(reader, forWhat))
             }
         } catch (e: MalformedURLException) {
             e.printStackTrace()

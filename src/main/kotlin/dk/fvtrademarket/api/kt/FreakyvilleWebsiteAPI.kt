@@ -1,5 +1,7 @@
 package dk.fvtrademarket.api.kt
 
+import com.google.gson.Gson
+import dk.fvtrademarket.api.kt.internal.AdvancedRequestBinder
 import dk.fvtrademarket.api.kt.internal.cache.Cache
 import dk.fvtrademarket.api.kt.internal.cache.CacheHolder
 import dk.fvtrademarket.api.kt.internal.cache.ICacheType
@@ -9,6 +11,7 @@ import dk.fvtrademarket.api.kt.lists.StaffList
 import dk.fvtrademarket.api.kt.profile.LinkedFreakyvilleProfile
 import dk.fvtrademarket.api.kt.wheel.WheelWrapper
 import java.time.Duration
+import java.util.Optional
 import java.util.UUID
 
 class FreakyvilleWebsiteAPI: CacheHolder {
@@ -40,6 +43,14 @@ class FreakyvilleWebsiteAPI: CacheHolder {
 
     fun getLinkedProfile(discordId: Long): LinkedFreakyvilleProfile {
         return getLinkedProfile(discordId.toString())
+    }
+
+    fun getLinkedProfileByMinecraftName(minecraftName: String): Optional<LinkedFreakyvilleProfile> {
+        return AdvancedRequestBinder.findProfileByMinecraftName(minecraftName)
+    }
+
+    fun getLinkedProfileByDiscordName(discordName: String): Optional<LinkedFreakyvilleProfile> {
+        return AdvancedRequestBinder.findProfileByDiscordName(discordName)
     }
 
     fun getGuardList(): GuardList {
