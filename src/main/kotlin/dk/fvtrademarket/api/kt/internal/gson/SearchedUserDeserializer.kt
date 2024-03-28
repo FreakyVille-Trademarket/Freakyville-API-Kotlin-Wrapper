@@ -4,9 +4,9 @@ import com.google.gson.JsonDeserializationContext
 import com.google.gson.JsonDeserializer
 import com.google.gson.JsonElement
 import com.google.gson.JsonParseException
-import dk.fvtrademarket.api.kt.search.DiscordUser
-import dk.fvtrademarket.api.kt.search.MinecraftUser
-import dk.fvtrademarket.api.kt.search.SearchedUser
+import dk.fvtrademarket.api.kt.website.search.DiscordUser
+import dk.fvtrademarket.api.kt.website.search.MinecraftUser
+import dk.fvtrademarket.api.kt.website.search.SearchedUser
 import java.lang.reflect.Type
 
 class SearchedUserDeserializer : JsonDeserializer<SearchedUser> {

@@ -1,4 +1,4 @@
-package dk.fvtrademarket.api.kt.wheel
+package dk.fvtrademarket.api.kt.website.wheel
 
 import java.util.UUID
 

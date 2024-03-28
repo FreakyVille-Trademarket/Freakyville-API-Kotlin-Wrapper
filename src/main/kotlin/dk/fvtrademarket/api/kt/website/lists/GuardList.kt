@@ -1,4 +1,4 @@
-package dk.fvtrademarket.api.kt.lists
+package dk.fvtrademarket.api.kt.website.lists
 
 class GuardList(success: Boolean, val item: GuardList.Item) {
     init {

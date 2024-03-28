@@ -1,4 +1,4 @@
-package dk.fvtrademarket.api.kt.search
+package dk.fvtrademarket.api.kt.website.search
 
 interface SearchedUser {
     val type: String

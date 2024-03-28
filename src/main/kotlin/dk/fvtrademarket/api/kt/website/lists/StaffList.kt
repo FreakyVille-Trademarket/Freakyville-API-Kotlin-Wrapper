@@ -1,4 +1,4 @@
-package dk.fvtrademarket.api.kt.lists
+package dk.fvtrademarket.api.kt.website.lists
 
 class StaffList(success: Boolean, val item: StaffList.Item) {
     init {

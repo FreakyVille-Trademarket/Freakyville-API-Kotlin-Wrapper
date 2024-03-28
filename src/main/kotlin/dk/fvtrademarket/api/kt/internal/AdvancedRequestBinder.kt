@@ -1,10 +1,10 @@
 package dk.fvtrademarket.api.kt.internal
 
 import dk.fvtrademarket.api.kt.internal.requests.RequestMaker
-import dk.fvtrademarket.api.kt.profile.LinkedFreakyvilleProfile
-import dk.fvtrademarket.api.kt.search.DiscordUser
-import dk.fvtrademarket.api.kt.search.MinecraftUser
-import dk.fvtrademarket.api.kt.search.PerformedSearch
+import dk.fvtrademarket.api.kt.website.profile.LinkedFreakyvilleProfile
+import dk.fvtrademarket.api.kt.website.search.DiscordUser
+import dk.fvtrademarket.api.kt.website.search.MinecraftUser
+import dk.fvtrademarket.api.kt.website.search.PerformedSearch
 import java.net.URL
 import java.util.Optional
 

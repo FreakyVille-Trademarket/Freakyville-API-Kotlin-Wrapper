@@ -1,13 +1,12 @@
 package dk.fvtrademarket.api.kt.internal.requests
 
-import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dk.fvtrademarket.api.kt.internal.gson.SearchedUserDeserializer
-import dk.fvtrademarket.api.kt.lists.GuardList
-import dk.fvtrademarket.api.kt.lists.StaffList
-import dk.fvtrademarket.api.kt.profile.LinkedFreakyvilleProfile
-import dk.fvtrademarket.api.kt.search.SearchedUser
-import dk.fvtrademarket.api.kt.wheel.WheelWrapper
+import dk.fvtrademarket.api.kt.website.lists.GuardList
+import dk.fvtrademarket.api.kt.website.lists.StaffList
+import dk.fvtrademarket.api.kt.website.profile.LinkedFreakyvilleProfile
+import dk.fvtrademarket.api.kt.website.search.SearchedUser
+import dk.fvtrademarket.api.kt.website.wheel.WheelWrapper
 import java.io.IOException
 import java.io.InputStreamReader
 import java.net.MalformedURLException

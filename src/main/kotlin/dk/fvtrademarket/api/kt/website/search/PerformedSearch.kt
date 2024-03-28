@@ -1,4 +1,4 @@
-package dk.fvtrademarket.api.kt.search
+package dk.fvtrademarket.api.kt.website.search
 
 class PerformedSearch(success: Boolean, val items: List<SearchedUser>) {
     init {

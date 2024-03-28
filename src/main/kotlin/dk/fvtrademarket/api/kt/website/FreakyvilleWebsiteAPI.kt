@@ -1,15 +1,14 @@
-package dk.fvtrademarket.api.kt
+package dk.fvtrademarket.api.kt.website
 
-import com.google.gson.Gson
 import dk.fvtrademarket.api.kt.internal.AdvancedRequestBinder
 import dk.fvtrademarket.api.kt.internal.cache.Cache
 import dk.fvtrademarket.api.kt.internal.cache.CacheHolder
 import dk.fvtrademarket.api.kt.internal.cache.ICacheType
 import dk.fvtrademarket.api.kt.internal.requests.RequestMaker
-import dk.fvtrademarket.api.kt.lists.GuardList
-import dk.fvtrademarket.api.kt.lists.StaffList
-import dk.fvtrademarket.api.kt.profile.LinkedFreakyvilleProfile
-import dk.fvtrademarket.api.kt.wheel.WheelWrapper
+import dk.fvtrademarket.api.kt.website.lists.GuardList
+import dk.fvtrademarket.api.kt.website.lists.StaffList
+import dk.fvtrademarket.api.kt.website.profile.LinkedFreakyvilleProfile
+import dk.fvtrademarket.api.kt.website.wheel.WheelWrapper
 import java.time.Duration
 import java.util.Optional
 import java.util.UUID

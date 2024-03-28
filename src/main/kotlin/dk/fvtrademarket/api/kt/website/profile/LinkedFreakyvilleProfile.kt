@@ -1,4 +1,4 @@
-package dk.fvtrademarket.api.kt.profile
+package dk.fvtrademarket.api.kt.website.profile
 
 import java.util.UUID
 
