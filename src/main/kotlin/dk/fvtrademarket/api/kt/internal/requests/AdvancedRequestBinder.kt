@@ -1,6 +1,5 @@
-package dk.fvtrademarket.api.kt.internal
+package dk.fvtrademarket.api.kt.internal.requests
 
-import dk.fvtrademarket.api.kt.internal.requests.RequestMaker
 import dk.fvtrademarket.api.kt.website.profile.LinkedFreakyvilleProfile
 import dk.fvtrademarket.api.kt.website.search.DiscordUser
 import dk.fvtrademarket.api.kt.website.search.MinecraftUser

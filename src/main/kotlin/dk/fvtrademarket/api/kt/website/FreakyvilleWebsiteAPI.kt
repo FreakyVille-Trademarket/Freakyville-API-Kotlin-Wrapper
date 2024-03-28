@@ -1,6 +1,6 @@
 package dk.fvtrademarket.api.kt.website
 
-import dk.fvtrademarket.api.kt.internal.AdvancedRequestBinder
+import dk.fvtrademarket.api.kt.internal.requests.AdvancedRequestBinder
 import dk.fvtrademarket.api.kt.internal.cache.Cache
 import dk.fvtrademarket.api.kt.internal.cache.CacheHolder
 import dk.fvtrademarket.api.kt.internal.cache.ICacheType
