@@ -57,7 +57,7 @@ object RequestMaker {
 
     private fun typeMapper(type: Class<*>): String {
         return when (type) {
-            WheelWrapper::class.java -> "wheel"
+            WheelWrapper::class.java -> "wheel/wheel"
             LinkedFreakyvilleProfile::class.java -> "user/discord"
             GuardList::class.java -> "guard"
             StaffList::class.java -> "staff"
